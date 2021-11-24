@@ -1,19 +1,20 @@
 package com.example.demo.controller;
 
-import com.example.demo.service.ApplicationService;
+import com.example.demo.service.ServiceMovie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-
-public class ApplicationflowController {
+public class Control {
     @Autowired
-    ApplicationService service;
-@RequestMapping("/first")
-    public String flow1(){
-    String message = service.repositry();
-        return message;
-
+    ServiceMovie service;
+    @RequestMapping("/moviename")
+    public String movie(){
+      //  String movie="Radhey";
+        String movie= service.movie();
+        return movie;
     }
+
+
 }

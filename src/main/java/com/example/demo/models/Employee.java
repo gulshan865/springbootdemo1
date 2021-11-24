@@ -1,10 +1,22 @@
 package com.example.demo.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Employee {
+    @Id
+    @GeneratedValue
+    Long id;
     String name;
     int age;
     double salary;
     String company;
+
+    public Employee() {
+
+    }
 
     public Employee(String name, int age, double salary, String company) {
         this.name = name;
