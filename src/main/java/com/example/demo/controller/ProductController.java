@@ -34,7 +34,7 @@ public class ProductController {
 
     @DeleteMapping("/remove_product")
 
-    public String deletproduct(Long id){
+    public String deletproduct(@RequestParam Long id){
         return service.deletproduct(id);
     }
 }
